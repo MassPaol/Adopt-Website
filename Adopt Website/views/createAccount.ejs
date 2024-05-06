@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adopt Me!</title>
+    <link rel="stylesheet" href="../public/WebStyle.css">
+</head>
+<body>
+    <%- include('partials/sidemenu') %>
+
+    <div class="main_container">
+        <%- include('partials/header') %>
+
+        <div class="maincontent">
+            <section>
+                <h2>Create Account</h2>
+                <form id="createAccountForm">
+                    <p class="labels">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                        <p style="font-size: medium;">Username must contain either letters or digits only.</p>
+                    </p>
+                    <p class="labels">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                        <p style="font-size: medium;">Password must be at least 4 characters long 
+                            (characters are to be letters and digits only), have at least one letter 
+                            and at least one digit. </p>
+                    </p>
+                    <input type="submit" value="Create Account"><br><br>
+                    <div id="message"></div>
+                </form>
+        </section>
+        </div>
+        <%- include('partials/footer') %>
+    </div>
+    <script src="../public/WebJS.js"></script>
+</body>
+</html>

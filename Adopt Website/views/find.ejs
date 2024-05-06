@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../public/WebStyle.css">
+        <title>Adopt Me!</title>
+    </head>
+    <body>        
+        <%- include('partials/sidemenu') %>
+
+        <div class="main_container">
+            <%- include('partials/header') %>
+
+            <div class="maincontent">
+                <section>
+                    <h2>Search for the Perfect Match</h2>
+                    <form id="searchForm">
+                        <p class="labels">Choose the animal:</p>
+                        <input type="radio" id="dog" name="animal_type" value="Dog">
+                        <label for="dog">Dog</label>
+                        <input type="radio" id="cat" name="animal_type" value="Cat">
+                        <label for="cat">Cat</label>
+                        <br><br><br>
+
+                        <label class="labels" for="animal_breed">Choose a breed: </label>
+                        <select name="animal_breed" id="animal_breed">
+                            <option disabled="disabled" selected="selected" value="invalid">Select a breed</option>
+                            <optgroup label="Dog Breeds">
+                                <option value="labrador_retriever">Labrador Retriever</option>
+                                <option value="german_shepherd">German Shepherd</option>
+                                <option value="golden_retriever">Golden Retriever</option>
+                                <option value="bulldog">Bulldog</option>
+                                <option value="beagle">Beagle</option>
+                                <option value="french_bulldog">French Bulldog</option>
+                                <option value="poodle">Poodle</option>
+                                <option value="boxer">Boxer</option>
+                                <option value="yorkshire_terrier">Yorkshire Terrier</option>
+                                <option value="daschund">Daschund</option>
+                            </optgroup>
+                            <optgroup label="Cat Breeds">
+                                <option value="domestic_shorthair">Domestic Shorthair</option>
+                                <option value="persian">Persian</option>
+                                <option value="maine_coon">Maine Coon</option>
+                                <option value="siamese">Siamese</option>
+                                <option value="ragdoll">Ragdoll</option>
+                                <option value="british_shorthair">British Shorthair</option>
+                                <option value="bengal">Bengal</option>
+                                <option value="sphynx">Sphynx</option>
+                                <option value="abyssinian"> Abyssinian</option>
+                                <option value="scottish_fold">Scottish Fold</option>
+                            </optgroup>
+                        </select>
+                        <br><br><br>
+
+                        <label class="labels" for="animal_age">Preferred age of animal: </label>
+                        <select name="animal_age" id="animal_age">
+                            <option disabled="disabled" selected="selected" value="invalid">Select an age option</option>
+                            <option value="puppy_kitten">Puppy/Kitten (up to 1 year old)</option>
+                            <option value="young_adult">Young Adult (1-3 years old)</option>
+                            <option value="adult">Adult (3-7 years old)</option>
+                            <option value="senior">Senior (7 years old and older)</option>
+                        </select>
+                        <br><br>
+
+                        <p class="labels">Preferred gender:</p>
+                        <input type="radio" id="male" name="animal_gender" value="Male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="animal_gender" value="Female">
+                        <label for="female">Female</label>
+                        <br><br>
+
+                        <p class="labels">Who it needs to get along with:</p>
+                        <input type="checkbox" id="other_dogs" name="behaviour" value="other_dogs">
+                        <label for="other_dogs">Other Dogs</label>
+                        <input type="checkbox" id="other_cats" name="behaviour" value="other_cats">
+                        <label for="other_cats">Other Cats</label>
+                        <input type="checkbox" id="small_children" name="behaviour" value="small_children">
+                        <label for="small_children">Small Children</label>
+                        <br><br><br>
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Clear">
+                    </form>
+                </section>
+            </div>
+            
+            <%- include('partials/footer') %>
+        </div>
+        <script src="../public/WebJS.js"></script>
+    </body>
+</html>
